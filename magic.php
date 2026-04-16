@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/lib/auth.php';
-require_once __DIR__ . '/lib/sheets.php';
+require_once __DIR__ . '/lib/store.php';
 require_once __DIR__ . '/bootstrap.php';
 
 $token = trim($_GET['token'] ?? '');

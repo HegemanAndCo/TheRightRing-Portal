@@ -8,10 +8,11 @@ RUN apt-get update && apt-get install -y \
     git \
     libzip-dev \
     libicu-dev \
+    libpq-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # Install PHP extensions
-RUN docker-php-ext-install zip intl opcache
+RUN docker-php-ext-install zip intl opcache pdo_pgsql
 
 # Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer

@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../lib/auth.php';
-require_once __DIR__ . '/../lib/sheets.php';
+require_once __DIR__ . '/../lib/store.php';
 
 require_once __DIR__ . '/../bootstrap.php';
 
@@ -40,7 +40,7 @@ if ($mode === 'create') {
     // Create user record
     $phone4 = substr(preg_replace('/\D/', '', $data['phone']), -4);
 
-    require_once __DIR__ . '/../lib/sheets.php';
+    require_once __DIR__ . '/../lib/store.php';
     createOrder($data);
     createUser([
         'email'        => $data['email'],

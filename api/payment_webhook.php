@@ -8,7 +8,7 @@
 
 require_once __DIR__ . '/../bootstrap.php';
 
-require_once __DIR__ . '/../lib/sheets.php';
+require_once __DIR__ . '/../lib/store.php';
 
 function sendCarePlanAdminEmail(array $order, float $amount): void {
     try {

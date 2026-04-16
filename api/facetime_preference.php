@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../lib/auth.php';
-require_once __DIR__ . '/../lib/sheets.php';
+require_once __DIR__ . '/../lib/store.php';
 
 header('Content-Type: application/json');
 requireCustomerLogin();
