@@ -1,0 +1,18 @@
+Options -Indexes
+
+# Allow large uploads (photos/videos up to 100MB)
+php_value upload_max_filesize 100M
+php_value post_max_size 105M
+
+RewriteEngine On
+
+# Send all requests to index.php EXCEPT actual files and API/assets paths
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^api/(.*)$ api/$1 [L]
+
+# Serve assets directly
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule ^ - [L]
+
+# PHP pages map directly (they're real files)

@@ -1,0 +1,6 @@
+vendor/
+.env
+uploads/*
+!uploads/.gitkeep
+Portal/google-credentials.json
+*.log
